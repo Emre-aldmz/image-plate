@@ -1,0 +1,16 @@
+requests==2.32.3
+Pillow==11.0.0
+urllib3==2.3.0
+pydantic==2.10.6
+setuptools==65.5.0
+fastapi==0.115.8
+hypercorn==0.17.3
+uvicorn==0.34.0
+multiprocess==0.70.17
+redis==5.2.1
+asyncio==3.4.3
+python-dotenv==1.0.1
+PyYAML==6.0.2
+numpy==1.26.4
+gdown==5.2.0
+websockets==12.0

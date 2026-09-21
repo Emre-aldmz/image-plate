@@ -1,0 +1,9 @@
+FROM python:3.12.9-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential cmake libglib2.0-0 libsm6 libxext6 libgl1-mesa-glx python3-libgpiod ffmpeg openssl && apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    mkdir -p /etc/ssl/private && openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout /etc/ssl/private/key.pem -out /etc/ssl/private/cert.pem -subj "/C=TR/ST=KOCAELI/O=NovaVision AI/CN=novavision.ai"
+WORKDIR /opt/project
+COPY . /opt/project
+RUN pip install --no-cache-dir -r requirements.prod
+RUN ["chmod", "+x", "/opt/project/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/opt/project/entrypoint.sh"]
