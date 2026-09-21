@@ -40,4 +40,14 @@ async def api(request: Request, access_token: str = Depends(api_key_security)):
 
 
 if __name__ == "__main__":
+    import os
+    
+    # Varsayılan port ve host ayarlarını SDK için tanımla (eğer dışarıdan boş gelirse)
+    name = os.environ.get("NAME", "")
+    if name:
+        prefix = name.upper().replace("/", "_")
+        os.environ.setdefault(f"{prefix}_SERVICE_HOST", "0.0.0.0")
+        os.environ.setdefault(f"{prefix}_SERVICE_PORT", "8000")
+        os.environ.setdefault(f"{prefix}_SERVICE_SSL", "DISABLE")
+
     start_server(app=app)
