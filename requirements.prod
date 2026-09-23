@@ -14,3 +14,8 @@ PyYAML==6.0.2
 numpy==1.26.4
 gdown==5.2.0
 websockets==12.0
+torch==2.14.0
+ultralytics==8.4.159
+pandas==3.0.6
+seaborn==0.13.2
+scipy==1.18.1
