@@ -10,7 +10,7 @@ requests==2.32.3
 Pillow==11.0.0
 urllib3==2.3.0
 pydantic==2.10.6
-setuptools==65.5.0
+setuptools==84.0.0
 fastapi==0.115.8
 hypercorn==0.17.3
 uvicorn==0.34.0
