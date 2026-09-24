@@ -18,3 +18,4 @@ ultralytics==8.4.6
 pandas==2.3.3
 seaborn==0.13.2
 fast-plate-ocr==0.3.0
+onnxruntime-gpu==1.19.2
